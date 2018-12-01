@@ -77,9 +77,8 @@ const ListProjects: React.FunctionComponent<Props> = ({ classes }) => {
                     <Typography variant="body1">
                       {project.description}
                     </Typography>
-                    <Typography variant="h6">Manager:</Typography>
                     <Typography variant="body2">
-                      {project.manager.name}
+                      Manager: {project.manager.name}
                     </Typography>
                     <Typography variant="h6">Developers</Typography>
                     {project.developers.map(dev => (
