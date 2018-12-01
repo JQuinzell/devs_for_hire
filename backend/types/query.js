@@ -5,6 +5,7 @@ module.exports = gql`
   # (A "Mutation" type will be covered later on.)
   type Query {
     users: [User]
+    findUser(name: String!): User
     projects: [project]
   }
 `
