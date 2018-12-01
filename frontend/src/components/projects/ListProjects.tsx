@@ -12,6 +12,7 @@ import {
   WithStyles,
   withStyles
 } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const query = gql`
   query projects {
@@ -73,7 +74,11 @@ const ListProjects: React.FunctionComponent<Props> = ({ classes }) => {
               <Grid key={project.id} item>
                 <Card className={classes.card}>
                   <CardContent>
-                    <Typography variant="h6">{project.title}</Typography>
+                    <Typography variant="h6">
+                      <Link to={`/projects/${project.id}`}>
+                        {project.title}
+                      </Link>
+                    </Typography>
                     <Typography variant="body1">
                       {project.description}
                     </Typography>
