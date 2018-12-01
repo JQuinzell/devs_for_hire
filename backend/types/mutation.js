@@ -11,6 +11,6 @@ module.exports = gql`
       available: Boolean
       dateMade: String
       description: String
-    ): project
+    ): Project
   }
 `

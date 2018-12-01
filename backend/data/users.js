@@ -5,7 +5,7 @@ module.exports = [
     email: 'duwtgb@mst.edu',
     password: 'hotdiggitydog',
     isMentor: false,
-    isPM: false,
+    isProjectManager: false,
     languages: ['C++', 'TypeScript'],
     gitUrl: 'blah blah.com'
   }
