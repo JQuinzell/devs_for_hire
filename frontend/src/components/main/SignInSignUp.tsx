@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { createStyles, withStyles, WithStyles } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const styles = createStyles({
   container: {
@@ -26,13 +27,15 @@ const SignInSignUp: React.FunctionComponent<Props> = ({ classes }) => {
       spacing={16}
     >
       <Grid item>
-        <Button
-          className={`${classes.giantButton}`}
-          variant="contained"
-          size="large"
-        >
-          Sign Up
-        </Button>
+        <Link to="signup">
+          <Button
+            className={`${classes.giantButton}`}
+            variant="contained"
+            size="large"
+          >
+            Sign Up
+          </Button>
+        </Link>
       </Grid>
       <Grid item>
         <Typography variant="body1">or</Typography>

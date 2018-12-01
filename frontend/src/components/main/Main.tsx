@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { createStyles, withStyles, WithStyles } from '@material-ui/core'
 import SignInSignUp from './SignInSignUp'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import SignUp from './SignUp'
 
 const appBarHeight = 64
 
@@ -33,7 +34,8 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
       <div className={classes.main}>
         <Router>
           <Switch>
-            <Route path="/" component={SignInSignUp} />
+            <Route exact path="/" component={SignInSignUp} />
+            <Route path="/signup" component={SignUp} />
           </Switch>
         </Router>
       </div>
