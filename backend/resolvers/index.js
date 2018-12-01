@@ -13,5 +13,8 @@ module.exports = {
       projects.push(args)
       return args
     }
+  },
+  Project: {
+    manager: project => users.find(user => user.id === project.managerID)
   }
 }
