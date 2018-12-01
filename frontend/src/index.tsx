@@ -1,4 +1,5 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import Main from './components/main/Main'
 
-ReactDOM.render(<h1>Hello</h1>, document.getElementById('app'))
+ReactDOM.render(<Main />, document.getElementById('app'))
