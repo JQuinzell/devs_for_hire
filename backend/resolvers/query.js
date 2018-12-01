@@ -1,5 +1,5 @@
-const books = require('../data/books')
+const coders = require("../data/coders");
 
 module.exports = {
-    books: () =>  books,
-}
+  coders: () => coders
+};

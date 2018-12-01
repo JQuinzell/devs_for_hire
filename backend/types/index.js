@@ -1,4 +1,6 @@
 module.exports = [
-    require('./book'),
-    require('./query')
-]
+  require("./coder"),
+  require("./founder"),
+  require("./idea"),
+  require("./query")
+];
