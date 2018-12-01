@@ -1,6 +1,6 @@
 module.exports = [
   {
-    id: 12,
+    id: '12',
     name: 'Dylan Warren',
     email: 'duwtgb@mst.edu',
     password: 'hotdiggitydog',
@@ -10,7 +10,7 @@ module.exports = [
     gitUrl: 'blah blah.com'
   },
   {
-    id: 1,
+    id: 'jared',
     name: 'Jared Rainwater',
     email: 'jqrvz6@mst.edu',
     password: 'pass',
@@ -20,7 +20,7 @@ module.exports = [
     gitUrl: 'blah blah.com'
   },
   {
-    id: 2,
+    id: 'somebody',
     name: 'Somebody',
     email: 'something@mst.edu',
     password: 'hotdiggitydog',
