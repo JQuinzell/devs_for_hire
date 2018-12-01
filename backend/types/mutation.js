@@ -1,27 +1,8 @@
 const { gql } = require('apollo-server')
 
 module.exports = gql`
-  input User {
-    id: ID!
-    name: String!
-    email: String!
-    password: String!
-    gitUrl: String
-    languages: [String]
-    isPM: Boolean
-    isMentor: Boolean
-  }
-
   type Mutation {
-    createAccount(
-      name: String
-      email: String
-      password: String
-      gitUrl: String
-      languages: [String]
-      isPM: Boolean
-      isMentor: Boolean
-    ): user
+    createAccount(user: UserInput): user
 
     createProject(
       title: String

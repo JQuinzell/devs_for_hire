@@ -1,14 +1,25 @@
 const { gql } = require('apollo-server')
 
 module.exports = gql`
-  type user {
-    id: ID!
+  type User {
+    id: ID
+    name: String
+    email: String
+    password: String
+    gitUrl: String
+    languages: [String]
+    isProjectManager: Boolean
+    isDeveloper: Boolean
+    isMentor: Boolean
+  }
+
+  input UserInput {
     name: String!
     email: String!
     password: String!
     gitUrl: String
-    languages: [String]
-    isPM: Boolean
+    isProjectManager: Boolean
+    isDeveloper: Boolean
     isMentor: Boolean
   }
 `
