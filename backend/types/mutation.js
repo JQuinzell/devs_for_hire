@@ -2,10 +2,10 @@ const { gql } = require('apollo-server')
 
 module.exports = gql`
   input User {
-    id: ID!
-    name: String!
-    email: String!
-    password: String!
+    id: ID
+    name: String
+    email: String
+    password: String
     gitUrl: String
     languages: [String]
     isPM: Boolean
@@ -14,6 +14,7 @@ module.exports = gql`
 
   type Mutation {
     createAccount(
+      id: ID
       name: String
       email: String
       password: String
