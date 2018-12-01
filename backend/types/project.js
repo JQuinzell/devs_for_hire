@@ -3,6 +3,7 @@ const { gql } = require('apollo-server')
 module.exports = gql`
   #
   type project {
+    id: Int!
     title: String
     manager: User
     developers: [User]
