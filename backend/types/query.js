@@ -4,7 +4,7 @@ module.exports = gql`
   # The "Query" type is the root of all GraphQL queries.
   # (A "Mutation" type will be covered later on.)
   type Query {
-    users: [user]
+    users: [User]
     projects: [project]
   }
 `

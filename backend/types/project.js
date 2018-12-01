@@ -4,8 +4,8 @@ module.exports = gql`
   #
   type project {
     title: String
-    manager: user
-    developers: [user]
+    manager: User
+    developers: [User]
     # If anyone can see it to sign up to work on it.
     available: Boolean
     dateMade: String
