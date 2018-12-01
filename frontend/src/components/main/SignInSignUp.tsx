@@ -16,7 +16,7 @@ const styles = createStyles({
 
 interface Props extends WithStyles<typeof styles> {}
 
-const SignIn: React.FunctionComponent<Props> = ({ classes }) => {
+const SignInSignUp: React.FunctionComponent<Props> = ({ classes }) => {
   return (
     <Grid
       className={classes.container}
@@ -50,4 +50,4 @@ const SignIn: React.FunctionComponent<Props> = ({ classes }) => {
   )
 }
 
-export default withStyles(styles)(SignIn)
+export default withStyles(styles)(SignInSignUp)

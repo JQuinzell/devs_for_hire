@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { createStyles, withStyles, WithStyles } from '@material-ui/core'
-import SignIn from './SignIn'
+import SignInSignUp from './SignInSignUp'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 const appBarHeight = 64
@@ -33,7 +33,7 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
       <div className={classes.main}>
         <Router>
           <Switch>
-            <Route path="/" component={SignIn} />
+            <Route path="/" component={SignInSignUp} />
           </Switch>
         </Router>
       </div>
