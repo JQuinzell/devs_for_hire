@@ -6,6 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 import TextField from '@material-ui/core/TextField'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+import { RouteComponentProps } from 'react-router-dom'
 
 const mutation = gql`
   mutation createAccount($user: UserInput!) {
@@ -36,7 +37,9 @@ class SignUpMutation extends Mutation<Data, Data> {}
 
 const { useState } = React
 
-const SignUp: React.FunctionComponent = ({}) => {
+interface Props extends RouteComponentProps {}
+
+const SignUp: React.FunctionComponent<Props> = ({ history }) => {
   const [name, setName] = useState('')
   const [isDeveloper, setIsDeveloper] = useState(false)
   const [isMentor, setIsMentor] = useState(false)
@@ -62,6 +65,7 @@ const SignUp: React.FunctionComponent = ({}) => {
                 }
               }
             })
+            history.push('/')
           }}
         >
           <Grid container direction="column" alignContent="center" spacing={16}>
