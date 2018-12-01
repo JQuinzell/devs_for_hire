@@ -1,5 +1,7 @@
-const coders = require("../data/coders");
+const users = require('../data/users')
+const projects = require('../data/projects')
 
 module.exports = {
-  coders: () => coders
-};
+    users: () => users,
+    projects: () => projects
+}

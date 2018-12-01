@@ -1,5 +1,13 @@
 const Query = require('./query')
 
 module.exports = {
-    Query
+    Query,
+    Mutation: {
+        createAccount: (_, args) => {
+            return args
+        },
+        createProject: (_, args) => {
+            return args
+        }
+    }
 }

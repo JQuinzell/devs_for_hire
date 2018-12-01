@@ -1,6 +1,6 @@
 module.exports = [
-  require("./coder"),
-  require("./founder"),
-  require("./idea"),
-  require("./query")
-];
+    require('./user'),
+    require('./project'),
+    require('./query'),
+    require('./mutation')
+]
