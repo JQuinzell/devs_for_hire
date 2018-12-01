@@ -15,6 +15,8 @@ module.exports = {
     }
   },
   Project: {
-    manager: project => users.find(user => user.id === project.managerID)
+    manager: project => users.find(user => user.id === project.managerID),
+    developers: project =>
+      project.developerIDs.map(id => users.find(user => user.id === id))
   }
 }
