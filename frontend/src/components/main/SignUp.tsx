@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import { RouteComponentProps } from 'react-router-dom'
+import client from 'client'
 
 const mutation = gql`
   mutation createAccount($user: UserInput!) {
@@ -65,6 +66,7 @@ const SignUp: React.FunctionComponent<Props> = ({ history }) => {
                 }
               }
             })
+            client.writeData({ data: { currentUser: name } })
             history.push('/')
           }}
         >
