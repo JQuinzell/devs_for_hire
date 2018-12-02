@@ -67,7 +67,7 @@ const SignUp: React.FunctionComponent<Props> = ({ history }) => {
               }
             }).then(() => {
               client.writeData({ data: { currentUser: name } })
-              history.push('/projects')
+              history.push('/account')
             })
           }}
         >
