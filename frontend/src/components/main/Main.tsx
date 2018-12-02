@@ -8,6 +8,7 @@ import SignInSignUp from './SignInSignUp'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SignUp from './SignUp'
 import ListProject from 'components/projects/ListProjects'
+import Project from 'components/projects/Project'
 
 const appBarHeight = 64
 
@@ -37,7 +38,8 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
           <Switch>
             <Route exact path="/" component={SignInSignUp} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/projects" component={ListProject} />
+            <Route exact path="/projects/:id" component={Project} />
+            <Route exact path="/projects" component={ListProject} />
           </Switch>
         </Router>
       </div>
