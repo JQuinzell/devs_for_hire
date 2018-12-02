@@ -17,7 +17,7 @@ module.exports = [
     password: 'pass',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['a', 'b', '12'],
+    projectIDs: ['b'],
     languages: ['TypeScript', 'HTML', 'CSS'],
     gitUrl: 'blah blah.com'
   },

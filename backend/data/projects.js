@@ -3,7 +3,7 @@ module.exports = [
     id: '12',
     title: 'Some nice project',
     managerID: '12',
-    developerIDs: ['jared', 'somebody'],
+    developerIDs: ['somebody'],
     available: true,
     dateMade: '12345',
     description: 'yeah boy this here be a neat project'
@@ -12,7 +12,7 @@ module.exports = [
     id: 'a',
     title: 'Supa Cool',
     managerID: '12',
-    developerIDs: ['jared', 'somebody'],
+    developerIDs: ['somebody'],
     available: true,
     dateMade: '12345',
     description: 'yeah boy this here be a neat project'

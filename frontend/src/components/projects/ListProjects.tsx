@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Query } from 'react-apollo'
+import { Query, Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -13,6 +13,7 @@ import {
   withStyles
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import client from 'client'
 
 const query = gql`
   query projects {
@@ -61,6 +62,16 @@ const styles = createStyles({
   }
 })
 
+const JOIN_PROJECT = gql`
+  mutation joinProject($project: String!, $user: String!) {
+    joinProject(project: $project, user: $user) {
+      id
+    }
+  }
+`
+
+const joinProject = (e: Event) => {}
+
 interface Props extends WithStyles<typeof styles> {}
 
 const ListProjects: React.FunctionComponent<Props> = ({ classes }) => {
@@ -98,7 +109,24 @@ const ListProjects: React.FunctionComponent<Props> = ({ classes }) => {
                   </CardContent>
                   <CardActions>
                     {project.available ? (
-                      <Button size="small">Join!</Button>
+                      <Mutation mutation={JOIN_PROJECT}>
+                        {joinProject => (
+                          <Button
+                            size="small"
+                            onClick={e => {
+                              e.preventDefault()
+                              joinProject({
+                                variables: {
+                                  project: project.id,
+                                  user: 'jared'
+                                }
+                              })
+                            }}
+                          >
+                            Join!
+                          </Button>
+                        )}
+                      </Mutation>
                     ) : null}
                   </CardActions>
                 </Card>
