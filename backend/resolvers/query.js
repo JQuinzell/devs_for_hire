@@ -5,7 +5,7 @@ module.exports = {
   users: () => users,
   projects: () => projects,
   findUser: (_, args) => {
-    const user = users.find(u => u.name === args.name)
+    const user = users.find(u => u.id === args.id)
     return user
   },
   findProject: (_, args) => {

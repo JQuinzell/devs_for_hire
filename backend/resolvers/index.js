@@ -26,5 +26,13 @@ module.exports = {
     manager: project => users.find(user => user.id === project.managerID),
     developers: project =>
       project.developerIDs.map(id => users.find(user => user.id === id))
+  },
+  User: {
+    projects: user =>
+      user.projectIDs.map(id => projects.find(project => project.id === id)),
+    managedProjects: user =>
+      user.projectIDs.map(id =>
+        projects.find(project => project.managerID === user.id)
+      )
   }
 }

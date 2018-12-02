@@ -8,6 +8,8 @@ module.exports = gql`
     password: String
     gitUrl: String
     languages: [String]
+    projects: [Project]
+    managedProjects: [Project]
     isProjectManager: Boolean
     isDeveloper: Boolean
     isMentor: Boolean

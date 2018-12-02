@@ -6,6 +6,7 @@ module.exports = [
     password: 'hotdiggitydog',
     isMentor: false,
     isProjectManager: false,
+    projectIDs: ['a', 'b', '12'],
     languages: ['C++', 'TypeScript'],
     gitUrl: 'blah blah.com'
   },
@@ -16,6 +17,7 @@ module.exports = [
     password: 'pass',
     isMentor: true,
     isProjectManager: false,
+    projectIDs: ['a', 'b', '12'],
     languages: ['TypeScript', 'HTML', 'CSS'],
     gitUrl: 'blah blah.com'
   },
@@ -26,6 +28,7 @@ module.exports = [
     password: 'hotdiggitydog',
     isMentor: false,
     isProjectManager: false,
+    projectIDs: ['12'],
     languages: ['TypeScript'],
     gitUrl: 'blah blah.com'
   }
