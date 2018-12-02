@@ -70,6 +70,12 @@ const JOIN_PROJECT = gql`
   }
 `
 
+const CURRENT_USER = gql`
+  query {
+    currentUser @client
+  }
+`
+
 const joinProject = (e: Event) => {}
 
 interface Props extends WithStyles<typeof styles> {}
@@ -111,20 +117,27 @@ const ListProjects: React.FunctionComponent<Props> = ({ classes }) => {
                     {project.available ? (
                       <Mutation mutation={JOIN_PROJECT}>
                         {joinProject => (
-                          <Button
-                            size="small"
-                            onClick={e => {
-                              e.preventDefault()
-                              joinProject({
-                                variables: {
-                                  project: project.id,
-                                  user: 'jared'
-                                }
-                              })
+                          <Query query={CURRENT_USER}>
+                            {({ loading, error, data }) => {
+                              if (loading || error) return null
+                              return (
+                                <Button
+                                  size="small"
+                                  onClick={e => {
+                                    e.preventDefault()
+                                    joinProject({
+                                      variables: {
+                                        project: project.id,
+                                        user: data.currentUser
+                                      }
+                                    })
+                                  }}
+                                >
+                                  Join!
+                                </Button>
+                              )
                             }}
-                          >
-                            Join!
-                          </Button>
+                          </Query>
                         )}
                       </Mutation>
                     ) : null}
