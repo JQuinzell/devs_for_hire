@@ -17,7 +17,7 @@ module.exports = [
     password: 'pass',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['b', 'd', 'g'],
     languages: ['TypeScript', 'HTML', 'CSS'],
     gitUrl: 'blah blah.com'
   },
@@ -28,7 +28,7 @@ module.exports = [
     password: 'ilikechicken',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['z', 'a', 'b', 'd', 'e'],
     languages: ['Python'],
     gitUrl: 'github.com/alice'
   },
@@ -39,7 +39,7 @@ module.exports = [
     password: 'b!ll7b0b',
     isMentor: false,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['b', 'd', 'e'],
     languages: ['Pearl'],
     gitUrl: 'github.com/bobbyjr'
   },
@@ -50,7 +50,7 @@ module.exports = [
     password: 'packofciggies',
     isMentor: false,
     isProjectManager: true,
-    projectIDs: ['z'],
+    projectIDs: ['d', 'g'],
     languages: ['gibberish'],
     gitUrl: 'github.com/whatIsGit'
   },
@@ -61,7 +61,7 @@ module.exports = [
     password: 'candyisland',
     isMentor: false,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['d'],
     languages: ['unicorn'],
     gitUrl: 'github.com/iHaveNoFingers'
   },
@@ -72,7 +72,7 @@ module.exports = [
     password: 'lasagna',
     isMentor: true,
     isProjectManager: true,
-    projectIDs: ['b'],
+    projectIDs: ['b', 'c', 'd', 'f'],
     languages: ['lasagna'],
     gitUrl: 'github.com/garfield'
   },
@@ -83,7 +83,7 @@ module.exports = [
     password: 'homerandcows',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['c', 'f'],
     languages: ['C++98'],
     gitUrl: 'github.com/whoNeedsAComputer'
   },
@@ -94,7 +94,7 @@ module.exports = [
     password: 'ihatecola',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['f'],
     languages: ['bash'],
     gitUrl: 'github.com/pepsiIsBad'
   }
