@@ -1,7 +1,14 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
+import {
+  Typography,
+  Grid,
+  List,
+  ListSubheader,
+  ListItemText
+} from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 interface User {
   id: Number
@@ -15,7 +22,7 @@ interface User {
 }
 
 interface Project {
-  id: Number
+  id: string
   title: String
   manager: User
   developers: User[]
@@ -38,6 +45,7 @@ const GET_USER = gql`
       languages
       gitUrl
       projects {
+        id
         title
         description
       }
@@ -58,7 +66,10 @@ const UserInfo = () => {
         console.log(data)
 
         return (
-          <Profile user={data.findUser} projects={data.findUser.projects} />
+          <Profile
+            user={data.findUser}
+            projects={data.findUser.projects || []}
+          />
         )
       }}
     </Query>
@@ -68,15 +79,23 @@ const UserInfo = () => {
 const Profile: React.FunctionComponent<Props> = ({ user, projects }) => {
   console.log(projects)
   return (
-    <div>
-      <span>{user.name}</span>
-      <br />
-      {projects
-        ? projects.map(pro => {
-            return <span>{pro.title}</span>
-          })
-        : ''}
-    </div>
+    <Grid container direction="column" alignContent="center">
+      <Grid item>
+        <Typography variant="h5">{user.name}</Typography>
+      </Grid>
+      <Grid item>
+        <List>
+          <ListSubheader>Projects</ListSubheader>
+          {projects.map(pro => (
+            <ListItemText key={pro.id}>
+              <Link to={`/projects/${pro.id}`}>
+                <Typography variant="h6">{pro.title}</Typography>
+              </Link>
+            </ListItemText>
+          ))}
+        </List>
+      </Grid>
+    </Grid>
   )
 }
 
