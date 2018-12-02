@@ -20,6 +20,14 @@ module.exports = {
       }
       projects.push(project)
       return project
+    },
+    joinProject: (_, args) => {
+      const user = users.find(user => user.id === args.user)
+      const project = projects.find(project => project.id === args.project)
+
+      user.projectIDs.push(project.id)
+      project.developerIDs.push(user.id)
+      return project
     }
   },
   Project: {
