@@ -67,7 +67,7 @@ const SignUp: React.FunctionComponent<Props> = ({ history }) => {
               }
             })
             client.writeData({ data: { currentUser: name } })
-            history.push('/')
+            history.push('/projects')
           }}
         >
           <Grid container direction="column" alignContent="center" spacing={16}>

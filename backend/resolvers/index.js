@@ -6,12 +6,20 @@ module.exports = {
   Query,
   Mutation: {
     createAccount: (_, args) => {
-      users.push(args)
-      return args
+      const user = {
+        id: args.name,
+        ...args
+      }
+      users.push(user)
+      return user
     },
     createProject: (_, args) => {
-      projects.push(args)
-      return args
+      const project = {
+        id: args.title,
+        ...args
+      }
+      projects.push(project)
+      return project
     }
   },
   Project: {

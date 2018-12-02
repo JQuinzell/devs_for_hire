@@ -30,7 +30,7 @@ interface Props {
 }
 
 const GET_USER = gql`
-  query user($id: Int!) {
+  query user($id: String!) {
     findUser(id: $id) {
       name
       email
@@ -39,7 +39,11 @@ const GET_USER = gql`
       gitUrl
       projects {
         title
-        id
+        description
+      }
+      managedProjects {
+        title
+        description
       }
     }
   }
@@ -47,7 +51,7 @@ const GET_USER = gql`
 
 const UserInfo = () => {
   return (
-    <Query query={GET_USER} variables={{ id: 12 }}>
+    <Query query={GET_USER} variables={{ id: 'jared' }}>
       {({ loading, error, data }) => {
         if (loading) return 'loading'
         if (error) return `Error ${error}`
@@ -62,13 +66,16 @@ const UserInfo = () => {
 }
 
 const Profile: React.FunctionComponent<Props> = ({ user, projects }) => {
+  console.log(projects)
   return (
     <div>
       <span>{user.name}</span>
       <br />
-      {projects.map(pro => {
-        return <span>{pro.title}</span>
-      })}
+      {projects
+        ? projects.map(pro => {
+            return <span>{pro.title}</span>
+          })
+        : ''}
     </div>
   )
 }
