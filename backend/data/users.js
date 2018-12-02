@@ -1,12 +1,12 @@
 module.exports = [
   {
-    id: '12',
+    id: 'dylan',
     name: 'Dylan Warren',
     email: 'duwtgb@mst.edu',
     password: 'hotdiggitydog',
     isMentor: false,
     isProjectManager: false,
-    projectIDs: ['a', 'b', '12'],
+    projectIDs: ['a', 'b', 'z'],
     languages: ['C++', 'TypeScript'],
     gitUrl: 'blah blah.com'
   },
@@ -17,19 +17,85 @@ module.exports = [
     password: 'pass',
     isMentor: true,
     isProjectManager: false,
-    projectIDs: ['b'],
+    projectIDs: ['b', 'd', 'g'],
     languages: ['TypeScript', 'HTML', 'CSS'],
     gitUrl: 'blah blah.com'
   },
   {
-    id: 'somebody',
-    name: 'Somebody',
-    email: 'something@mst.edu',
-    password: 'hotdiggitydog',
+    id: 'alice',
+    name: 'Alice White',
+    email: 'alice@mst.edu',
+    password: 'ilikechicken',
+    isMentor: true,
+    isProjectManager: false,
+    projectIDs: ['z', 'a', 'b', 'd', 'e'],
+    languages: ['Python'],
+    gitUrl: 'github.com/alice'
+  },
+  {
+    id: 'bob',
+    name: 'Billy Bob',
+    email: 'bob@mst.edu',
+    password: 'b!ll7b0b',
     isMentor: false,
     isProjectManager: false,
-    projectIDs: ['12'],
-    languages: ['TypeScript'],
-    gitUrl: 'blah blah.com'
+    projectIDs: ['b', 'd', 'e'],
+    languages: ['Pearl'],
+    gitUrl: 'github.com/bobbyjr'
+  },
+  {
+    id: 'karl',
+    name: 'Karl Hayes',
+    email: 'karl@mst.edu',
+    password: 'packofciggies',
+    isMentor: false,
+    isProjectManager: true,
+    projectIDs: ['d', 'g'],
+    languages: ['gibberish'],
+    gitUrl: 'github.com/whatIsGit'
+  },
+  {
+    id: 'charlie',
+    name: 'Charlie the unicorn',
+    email: 'charlie@unicorn.me',
+    password: 'candyisland',
+    isMentor: false,
+    isProjectManager: false,
+    projectIDs: ['d'],
+    languages: ['unicorn'],
+    gitUrl: 'github.com/iHaveNoFingers'
+  },
+  {
+    id: 'garfield',
+    name: 'Garfield',
+    email: 'lasagna@cats.me',
+    password: 'lasagna',
+    isMentor: true,
+    isProjectManager: true,
+    projectIDs: ['b', 'c', 'd', 'f'],
+    languages: ['lasagna'],
+    gitUrl: 'github.com/garfield'
+  },
+  {
+    id: 'price',
+    name: 'Clayton Price',
+    email: 'price@mst.edu',
+    password: 'homerandcows',
+    isMentor: true,
+    isProjectManager: false,
+    projectIDs: ['c', 'f'],
+    languages: ['C++98'],
+    gitUrl: 'github.com/whoNeedsAComputer'
+  },
+  {
+    id: 'pepper',
+    name: 'Dr Pepper',
+    email: 'pepper@mst.edu',
+    password: 'ihatecola',
+    isMentor: true,
+    isProjectManager: false,
+    projectIDs: ['f'],
+    languages: ['bash'],
+    gitUrl: 'github.com/pepsiIsBad'
   }
 ]
