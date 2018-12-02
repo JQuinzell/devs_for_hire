@@ -31,7 +31,7 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
       <CssBaseline />
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
-          <Typography variant="h6">Devs for hire</Typography>
+          <Typography variant="h3">StartupHub</Typography>
         </Toolbar>
       </AppBar>
       <div className={classes.main}>
