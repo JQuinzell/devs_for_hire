@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { createStyles, withStyles, WithStyles } from '@material-ui/core'
 import SignInSignUp from './SignInSignUp'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import SignUp from './SignUp'
 import UserInfo from 'components/users/Profile'
 import ListProject from 'components/projects/ListProjects'
@@ -27,15 +27,19 @@ interface Props extends WithStyles<typeof styles> {}
 
 const Main: React.FunctionComponent<Props> = ({ classes }) => {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <AppBar className={classes.appBar} position="static">
-        <Toolbar>
-          <Typography variant="h3">StartupHub</Typography>
-        </Toolbar>
-      </AppBar>
-      <div className={classes.main}>
-        <Router>
+    <Router>
+      <React.Fragment>
+        <CssBaseline />
+        <AppBar className={classes.appBar} position="static">
+          <Toolbar>
+            <Typography variant="h3">
+              <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/">
+                StartupHub
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <div className={classes.main}>
           <Switch>
             <Route exact path="/" component={SignInSignUp} />
             <Route path="/signup" component={SignUp} />
@@ -43,9 +47,9 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
             <Route exact path="/projects/:id" component={Project} />
             <Route exact path="/projects" component={ListProject} />
           </Switch>
-        </Router>
-      </div>
-    </React.Fragment>
+        </div>
+      </React.Fragment>
+    </Router>
   )
 }
 
