@@ -37,6 +37,18 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
                 StartupHub
               </Link>
             </Typography>
+            <Typography variant="h5">
+              <Link
+                style={{
+                  marginLeft: 20,
+                  textDecoration: 'none',
+                  color: 'inherit'
+                }}
+                to="/projects"
+              >
+                Projects
+              </Link>
+            </Typography>
           </Toolbar>
         </AppBar>
         <div className={classes.main}>
