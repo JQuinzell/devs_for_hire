@@ -4,7 +4,7 @@ const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
   clientState: {
     defaults: {
-      currentUser: null
+      currentUser: 'jared'
     },
     resolvers: {}
   }

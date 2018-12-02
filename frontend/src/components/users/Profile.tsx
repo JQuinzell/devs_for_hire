@@ -57,19 +57,32 @@ const GET_USER = gql`
   }
 `
 
+const GET_CURRENT_USER = gql`
+  query {
+    currentUser @client
+  }
+`
+
 const UserInfo = () => {
   return (
-    <Query query={GET_USER} variables={{ id: 'jared' }}>
+    <Query query={GET_CURRENT_USER}>
       {({ loading, error, data }) => {
-        if (loading) return 'loading'
-        if (error) return `Error ${error}`
-        console.log(data)
-
+        if (loading || error) return null
         return (
-          <Profile
-            user={data.findUser}
-            projects={data.findUser.projects || []}
-          />
+          <Query query={GET_USER} variables={{ id: data.currentUser }}>
+            {({ loading, error, data }) => {
+              if (loading) return 'loading'
+              if (error) return `Error ${error}`
+              console.log(data)
+
+              return (
+                <Profile
+                  user={data.findUser}
+                  projects={data.findUser.projects || []}
+                />
+              )
+            }}
+          </Query>
         )
       }}
     </Query>
