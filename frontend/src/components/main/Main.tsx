@@ -7,6 +7,7 @@ import { createStyles, withStyles, WithStyles } from '@material-ui/core'
 import SignInSignUp from './SignInSignUp'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SignUp from './SignUp'
+import UserInfo from 'components/users/Profile'
 
 const appBarHeight = 64
 
@@ -36,6 +37,7 @@ const Main: React.FunctionComponent<Props> = ({ classes }) => {
           <Switch>
             <Route exact path="/" component={SignInSignUp} />
             <Route path="/signup" component={SignUp} />
+            <Route path="/account" component={UserInfo} />
           </Switch>
         </Router>
       </div>
