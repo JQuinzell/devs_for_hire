@@ -7,6 +7,6 @@ module.exports = gql`
     users: [User]
     findUser(name: String!): User
     projects: [Project]
-    findProject(id: Int!): Project
+    findProject(id: String!): Project
   }
 `
