@@ -41,13 +41,15 @@ const SignInSignUp: React.FunctionComponent<Props> = ({ classes }) => {
         <Typography variant="body1">or</Typography>
       </Grid>
       <Grid item>
-        <Button
-          className={`${classes.giantButton}`}
-          variant="contained"
-          size="large"
-        >
-          Sign In
-        </Button>
+        <Link to="signin">
+          <Button
+            className={`${classes.giantButton}`}
+            variant="contained"
+            size="large"
+          >
+            Sign In
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   )

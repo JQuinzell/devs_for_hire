@@ -6,6 +6,7 @@ module.exports = gql`
   type Query {
     users: [User]
     findUser(id: String!): User
+    login(email: String!): User
     projects: [Project]
     findProject(id: String!): Project
   }
