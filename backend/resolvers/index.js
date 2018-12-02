@@ -7,8 +7,9 @@ module.exports = {
   Mutation: {
     createAccount: (_, args) => {
       const user = {
-        id: args.name,
-        ...args
+        id: args.user.name,
+        projectIDs: [],
+        ...args.user
       }
       users.push(user)
       return user
